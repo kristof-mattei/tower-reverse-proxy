@@ -1,5 +1,5 @@
 [package]
-name = "axum-proxy"
+name = "tower-reverse-proxy"
 version = "0.0.0-development"
 edition = "2024"
 rust-version = "1.88.0"
@@ -8,8 +8,8 @@ description = "Tower service for reverse proxy"
 license = "MIT OR Apache-2.0"
 categories = ["asynchronous", "web-programming", "web-programming::http-server"]
 keywords = ["http", "tower", "axum", "reverse", "proxy"]
-repository = "https://github.com/kristof-mattei/axum-proxy"
-documentation = "https://docs.rs/axum-proxy"
+repository = "https://github.com/kristof-mattei/tower-reverse-proxy"
+documentation = "https://docs.rs/tower-reverse-proxy"
 readme = "README.md"
 include = ["src/**", "/LICENSE", "/LICENSE-*"]
 

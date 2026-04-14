@@ -108,26 +108,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "axum-proxy"
-version = "0.0.0-development"
-dependencies = [
- "axum",
- "http",
- "http-body-util",
- "hyper",
- "hyper-rustls",
- "hyper-tls",
- "hyper-util",
- "mockito",
- "pretty_assertions",
- "regex",
- "reqwest",
- "tokio",
- "tower-service",
- "tracing",
-]
-
-[[package]]
 name = "base64"
 version = "0.22.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1743,6 +1723,26 @@ name = "tower-layer"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "121c2a6cda46980bb0fcd1647ffaf6cd3fc79a013de288782836f6df9c48780e"
+
+[[package]]
+name = "tower-reverse-proxy"
+version = "0.0.0-development"
+dependencies = [
+ "axum",
+ "http",
+ "http-body-util",
+ "hyper",
+ "hyper-rustls",
+ "hyper-tls",
+ "hyper-util",
+ "mockito",
+ "pretty_assertions",
+ "regex",
+ "reqwest",
+ "tokio",
+ "tower-service",
+ "tracing",
+]
 
 [[package]]
 name = "tower-service"

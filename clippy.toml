@@ -1,6 +1,6 @@
 absolute-paths-allowed-crates = [
     "axum",
-    "axum_proxy",
+    "tower_reverse_proxy",
     "hyper",
     "hyper_util",
     "std",

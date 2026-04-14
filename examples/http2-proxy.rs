@@ -48,9 +48,9 @@ mod server {
 
 mod proxy {
     use axum::Router;
-    use axum_proxy::builder;
-    use axum_proxy::client::Builder;
     use http::uri::Scheme;
+    use tower_reverse_proxy::builder;
+    use tower_reverse_proxy::client::Builder;
 
     pub(super) async fn serve() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
         let proxy_service_builder = builder(
@@ -61,11 +61,11 @@ mod proxy {
             "127.0.0.1:3000",
         )?;
 
-        let svc: axum_proxy::ReusedService<
-            axum_proxy::Identity,
-            axum_proxy::client::HttpConnector,
+        let svc: tower_reverse_proxy::ReusedService<
+            tower_reverse_proxy::Identity,
+            tower_reverse_proxy::client::HttpConnector,
             axum::body::Body,
-        > = proxy_service_builder.build(axum_proxy::rewrite::Identity {});
+        > = proxy_service_builder.build(tower_reverse_proxy::rewrite::Identity {});
 
         let router = Router::new().fallback_service(svc);
 
